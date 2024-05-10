@@ -8,9 +8,9 @@ function AppointmentForm() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  const [patientName, setPatientName] = useState("");
-  const [patientNumber, setPatientNumber] = useState("");
-  const [patientGender, setPatientGender] = useState("default");
+  const [fullName, setFullName] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [gender, setGender] = useState("default");
   const [appointmentTime, setAppointmentTime] = useState("");
   const [preferredMode, setPreferredMode] = useState("default");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -21,20 +21,20 @@ function AppointmentForm() {
 
     // Validate form inputs
     const errors = {};
-    if (!patientName.trim()) {
-      errors.patientName = "Patient name is required";
-    } else if (patientName.trim().length < 8) {
-      errors.patientName = "Patient name must be at least 8 characters";
+    if (!fullName.trim()) {
+      errors.fullName = "Your name is required";
+    } else if (fullName.trim().length < 3) {
+      errors.fullName = "Your name must be at least 3 characters";
     }
 
-    if (!patientNumber.trim()) {
-      errors.patientNumber = "Patient phone number is required";
-    } else if (patientNumber.trim().length !== 10) {
-      errors.patientNumber = "Patient phone number must be of 10 digits";
+    if (!contactNumber.trim()) {
+      errors.contactNumber = "Your contact number is required";
+    } else if (contactNumber.trim().length !== 10) {
+      errors.contactNumber = "Your contact number must be 10 digits";
     }
 
-    if (patientGender === "default") {
-      errors.patientGender = "Please select patient gender";
+    if (gender === "default") {
+      errors.gender = "Please select your gender";
     }
     if (!appointmentTime) {
       errors.appointmentTime = "Appointment time is required";
@@ -46,7 +46,7 @@ function AppointmentForm() {
       }
     }
     if (preferredMode === "default") {
-      errors.preferredMode = "Please select preferred mode";
+      errors.preferredMode = "Please select your preferred mode";
     }
 
     if (Object.keys(errors).length > 0) {
@@ -55,9 +55,9 @@ function AppointmentForm() {
     }
 
     // Reset form fields and errors after successful submission
-    setPatientName("");
-    setPatientNumber("");
-    setPatientGender("default");
+    setFullName("");
+    setContactNumber("");
+    setGender("default");
     setAppointmentTime("");
     setPreferredMode("default");
     setFormErrors({});
@@ -73,58 +73,57 @@ function AppointmentForm() {
     <div className="appointment-form-section">
       <h1 className="legal-siteTitle">
         <Link to="/">
-          Health <span className="legal-siteSign">+</span>
+          MealMate <span className="legal-siteSign"></span>
         </Link>
       </h1>
 
       <div className="form-container">
         <h2 className="form-title">
-          <span>Book Appointment Online</span>
+          <span>Reserve a meeting with us!</span>
         </h2>
 
         <form className="form-content" onSubmit={handleSubmit}>
           <label>
-            Patient Full Name:
+            Your Full Name:
             <input
               type="text"
-              value={patientName}
-              onChange={(e) => setPatientName(e.target.value)}
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
               required
             />
-            {formErrors.patientName && <p className="error-message">{formErrors.patientName}</p>}
+            {formErrors.fullName && <p className="error-message">{formErrors.fullName}</p>}
           </label>
 
           <br />
           <label>
-            Patient Phone Number:
+            Your Contact Number:
             <input
               type="text"
-              value={patientNumber}
-              onChange={(e) => setPatientNumber(e.target.value)}
+              value={contactNumber}
+              onChange={(e) => setContactNumber(e.target.value)}
               required
             />
-            {formErrors.patientNumber && <p className="error-message">{formErrors.patientNumber}</p>}
+            {formErrors.contactNumber && <p className="error-message">{formErrors.contactNumber}</p>}
           </label>
 
           <br />
           <label>
-            Patient Gender:
+            Your Gender:
             <select
-              value={patientGender}
-              onChange={(e) => setPatientGender(e.target.value)}
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
               required
             >
               <option value="default">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
-              <option value="private">I will inform Doctor only</option>
             </select>
-            {formErrors.patientGender && <p className="error-message">{formErrors.patientGender}</p>}
+            {formErrors.gender && <p className="error-message">{formErrors.gender}</p>}
           </label>
 
           <br />
           <label>
-            Preferred Appointment Time:
+            Preferred Meeting Time:
             <input
               type="datetime-local"
               value={appointmentTime}
@@ -151,18 +150,18 @@ function AppointmentForm() {
 
           <br />
           <button type="submit" className="text-appointment-btn">
-            Confirm Appointment
+            Confirm Meeting
           </button>
 
-          <p className="success-message" style={{display: isSubmitted ? "block" : "none"}}>Appointment details has been sent to the patients phone number via SMS.</p>
+          <p className="success-message" style={{display: isSubmitted ? "block" : "none"}}>Your Meeting details have been sent. We'll contact you soon!</p>
         </form>
       </div>
 
-      <div className="legal-footer">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+    {/*  <div className="legal-footer">
+       <p>© 2023 MealMate. All rights reserved.</p>
       </div>
-
-      <ToastContainer autoClose={5000} limit={1} closeButton={false} />
+  */}
+     {/* <ToastContainer autoClose={5000} limit={1} closeButton={false} />*/}
     </div>
   );
 }

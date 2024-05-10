@@ -11,17 +11,17 @@ function Doctors() {
     <div className="doctor-section" id="doctors">
       <div className="dt-title-content">
         <h3 className="dt-title">
-          <span>Meet Our Doctors</span>
+      {/* <span>Meet Our Doctors</span>*/}
         </h3>
 
-        <p className="dt-description">
+     {/* <p className="dt-description">
           Meet our exceptional team of specialist doctors, dedicated to
           providing top-notch healthcare services at Health Plus. Trust in their
           knowledge and experience to lead you towards a healthier and happier
           life.
-        </p>
+  </p> */}
       </div>
-
+  {/*
       <div className="dt-cards-content">
         <DoctorCard
           img={profile1}
@@ -50,8 +50,9 @@ function Doctors() {
           title="Hematologists"
           stars="4.8"
           reviews="500"
+          
         />
-      </div>
+</div>*/}
     </div>
   );
 }

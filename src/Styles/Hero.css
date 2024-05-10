@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    background: linear-gradient(to right, #ECF2FF, #FBFCFF);
+    background: linear-gradient(to right, #A8E4A0 , #FBFCFF);
 }
 /* Text section */
 .text-section {
@@ -41,7 +41,7 @@
     border: 1px solid transparent;
     border-radius: 28px;
     outline: transparent;
-    background-color: #1A8EFD;
+    background-color: #3F704D;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .8px;
@@ -49,9 +49,9 @@
     transition: all .4s ease;
 }
 .text-appointment-btn:hover {
-    color: #1A8EFD;
+    color: #3F704D;
     background-color: transparent;
-    border: 1px solid #1A8EFD;
+    border: 1px solid #3F704D;
 }
 .text-stats {
     margin-top: 40px;
@@ -80,8 +80,16 @@
 .hero-image-section {
     width: 40%;
     max-width: 100%;
-    text-align: center;
+    margin: 0 auto;
+    border: 3px solid #20722c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ensure it takes up all available vertical space */
+    box-sizing: border-box; /* Include border in width and height calculation */
 }
+
+
 .hero-image1 {
     width: 100%;
     height: auto;
@@ -97,7 +105,7 @@
     color: white;
     border: 3px solid white;
     border-radius: 50%;
-    background-color: #1A8EFD;
+    background-color: #3F704D;
     position: fixed;
     bottom: 50px;
     right: 50px;
@@ -147,4 +155,8 @@
         bottom: 32px;
         right: 32px;
     }
+}
+
+body{
+    background: linear-gradient(to right, #A8E4A0, #FBFCFF);
 }

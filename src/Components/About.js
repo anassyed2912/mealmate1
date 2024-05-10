@@ -1,5 +1,5 @@
 import React from "react";
-import Doctor from "../Assets/doctor-group.png";
+import Doctor from "../Assets/doctor-group.jpeg";
 import SolutionStep from "./SolutionStep";
 import "../Styles/About.css";
 
@@ -15,27 +15,28 @@ function About() {
           <span>About Us</span>
         </h3>
         <p className="about-description">
-          Welcome to Health Plus, your trusted partner for accessible and
-          personalized healthcare. Our expert doctors offer online consultations
-          and specialized services, prioritizing your well-being. Join us on
-          this journey towards a healthier you.
+        Welcome to Meal Mate, your personalized nutrition companion powered by AI technology. Our platform offers tailored meal plans and nutritional guidance, prioritizing your health and well-being. Join us in embracing a healthier lifestyle with intelligent eating choices.
+
+
+
+
         </p>
 
         <h4 className="about-text-title">Your Solutions</h4>
 
         <SolutionStep
-          title="Choose a Specialist"
-          description="Find your perfect specialist and book with ease at Health Plus. Expert doctors prioritize your health, offering tailored care."
+          title="Personalized Meal Plans"
+          description="Discover your ideal meal solutions with Meal Mate's AI-powered nutrition platform. Tailored to your preferences and health goals, our meal plans prioritize sustainability, supporting local farmers and promoting eco-friendly eating habits."
         />
 
         <SolutionStep
-          title="Make a Schedule"
-          description="Choose the date and time that suits you best, and let our dedicated team of medical professionals ensure your well-being with personalized care."
+          title="Flexible Scheduling"
+          description="Select the most convenient delivery times for your personalized meals. Our platform ensures seamless scheduling, allowing you to enjoy nutritious meals while minimizing food waste and supporting sustainable farming practices."
         />
 
         <SolutionStep
-          title="Get Your Solutions"
-          description="Our experienced doctors and specialists are here to provide expert advice and personalized treatment plans, helping you achieve your best possible health."
+          title="Empowering Farmers"
+          description="By choosing Meal Mate, you contribute to a more sustainable food system. We directly support local farmers, ensuring fair compensation and reducing environmental impact through responsible sourcing practices. Join us in empowering farmers and cultivating a healthier planet, one meal at a time."
         />
       </div>
     </div>

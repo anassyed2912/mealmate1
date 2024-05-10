@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/Footer.css";
-import SubscribeNewsletter from "./SubscribeNewsletter";
-import { Link } from "react-router-dom";
+//import SubscribeNewsletter from "./SubscribeNewsletter";
+//import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -10,39 +10,32 @@ function Footer() {
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-              Health <span className="ft-sign">+</span>
+              MealMate <span className="ft-sign"></span>
             </p>
             <p className="ft-description">
-              Talk to online doctors and get medical advice, online
-              prescriptions, refills and medical notes within minutes. On-demand
-              healthcare services at your fingertips.
+            Meal Mate: Your personalized nutrition companion. Tailored meal plans for a healthier you. Embrace sustainable eating with AI-guided solutions.
             </p>
           </div>
 
-          <SubscribeNewsletter />
+          {/* <SubscribeNewsletter /> */}
         </div>
 
         <div className="ft-list">
           <p className="ft-list-title">Services</p>
           <ul className="ft-list-items">
             <li>
-              <a href="#services">Emergency Care</a>
+              <a href="#services">Personalized Nutrition Plans</a>
             </li>
             <li>
-              <a href="#services">Heart Disease</a>
+              <a href="#services">Sustainable Meal Delivery</a>
             </li>
             <li>
-              <a href="#services">Dental Care</a>
-            </li>
-            <li>
-              <a href="#services">Prescription</a>
-            </li>
-            <li>
-              <a href="#services">Insights for doctors</a>
+              <a href="#services">AI-Powered Nutritional Support</a>
             </li>
           </ul>
         </div>
 
+        {/* 
         <div className="ft-list">
           <p className="ft-list-title">Legal</p>
           <ul className="ft-list-items">
@@ -63,35 +56,37 @@ function Footer() {
             </li>
           </ul>
         </div>
+        */}
 
         <div className="ft-list" id="contact">
           <p className="ft-list-title">Talk To Us</p>
           <ul className="ft-list-items">
             <li>
-              <a href="mailto:support@healthplus.com">support@healthplus.com</a>
+              <a href="mailto:support@healthplus.com">support@hMealMate.com</a>
             </li>
             <li>
               <a href="mailto:appointment@healthplus.com">
-                appointment@healthplus.com
+                appointment@MealMate.com
               </a>
             </li>
             <li>
-              <a href="tel:+022 5454 5252">+022 5454 5252</a>
+              <a href="tel:+022 5454 5252">1234567890</a>
             </li>
             <li>
-              <a href="tel:+022 2326 6232">+022 2326 6232</a>
+              <a href="tel:+022 2326 6232">1234567890</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="ft-copyright">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+         {/* <p>© 2013-2023 Health+. All rights reserved.</p>*/}
 
+        
         <ul className="ft-social-links">
           <li>
             <a
-              href="https://linkedin.com/in/Alkaison/"
+              href="https://linkedin.comkjio/in/Alkaison/"
               title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -108,7 +103,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://facebook.com/"
+              href="https://faceboojknlk.com/"
               title="FaceBook"
               target="_blank"
               rel="noopener noreferrer"
@@ -125,7 +120,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://x.com/Alkaison/"
+              href="https://x.salcom/Alpojkaison/"
               title="Twitter"
               target="_blank"
               rel="noopener noreferrer"
@@ -140,9 +135,11 @@ function Footer() {
             </a>
           </li>
         </ul>
+        
+        
       </div>
     </div>
   );
+  
 }
-
 export default Footer;
